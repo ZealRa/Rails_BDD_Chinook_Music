@@ -59,5 +59,12 @@ Prix total: 7.92
 Durée totale: 2453259 millisecondes/ 40 minutes 52 secondes
 
 Calcule le coût de l'intégralité de la discographie de "Deep Purple".
+90
 
 Modifie (via une boucle) tous les titres de "Eric Clapton" afin qu'ils soient affichés avec "Britney Spears" en artist.
+
+eric_clapton_tracks = Track.where(artist:"Eric Clapton")
+
+eric_clapton_tracks.each do |track|
+track.update(artist:"Britney Spears")
+end
